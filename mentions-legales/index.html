@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html.verrou body>*:not(.verrou-boite){display:none!important}
+.verrou-boite{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:#0a0628;font-family:Barlow,system-ui,sans-serif;color:#fff;text-align:center}
+.verrou-boite form{width:min(340px,100%);display:flex;flex-direction:column;gap:16px}
+.verrou-boite img{width:96px;margin:0 auto 6px}
+.verrou-boite h1{margin:0;font:400 30px/1.1 Anton,Impact,sans-serif;text-transform:uppercase}
+.verrou-boite p{margin:0;color:#b9b3e0}
+.verrou-boite input{font:600 20px/1 Barlow,sans-serif;text-align:center;letter-spacing:.08em;padding:16px;border-radius:14px;border:2px solid #3a2f8a;background:#140d45;color:#fff;text-transform:uppercase}
+.verrou-boite button{font:700 17px/1 Barlow,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:18px;border:0;border-radius:14px;background:#ff2bd6;color:#fff;cursor:pointer}
+.verrou-boite .erreur{color:#ff7ad9;min-height:1.2em}</style>
+<script>(function(){var H="90b5cb844ea624855c513ea3ae714b3ee3d99a9345890eaae8639f965a1168bb";try{if(localStorage.getItem("buddies-apercu")===H)return}catch(e){}
+document.documentElement.classList.add("verrou");
+document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.className="verrou-boite";
+d.innerHTML='<form><img src="/buddies-apercu/img/logo-neon.webp" alt="Buddie\'s"><h1>Aperçu du site</h1><p>Entrez le code reçu pour voir le site.</p><input name="c" autocomplete="off" required aria-label="Code d\'accès"><button>Voir le site</button><p class="erreur" role="alert"></p></form>';
+document.body.appendChild(d);var f=d.querySelector("form");f.c.focus();
+f.addEventListener("submit",function(e){e.preventDefault();var v="buddies-apercu:"+f.c.value.trim().toUpperCase();
+crypto.subtle.digest("SHA-256",new TextEncoder().encode(v)).then(function(b){var h=Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("");
+if(h===H){try{localStorage.setItem("buddies-apercu",H)}catch(e){}d.remove();document.documentElement.classList.remove("verrou")}
+else{d.querySelector(".erreur").textContent="Code incorrect.";f.c.select()}})})})})();</script>
+<title>Aperçu · Mentions légales – Buddie&#x27;s</title>
+<meta name="description" content="Mentions légales et politique de confidentialité du site Buddie&#x27;s.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://buddiesburger.fr/mentions-legales/">
+<meta name="theme-color" content="#0a0628">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Buddie's">
+<meta property="og:title" content="Mentions légales – Buddie&#x27;s">
+<meta property="og:description" content="Mentions légales et politique de confidentialité du site Buddie&#x27;s.">
+<meta property="og:url" content="https://buddiesburger.fr/mentions-legales/">
+<meta property="og:image" content="https://buddiesburger.fr/img/partage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/buddies-apercu/img/favicon.png">
+<link rel="apple-touch-icon" href="/buddies-apercu/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/buddies-apercu/img/hero-burger.webp" media="(min-width: 761px)">
+<link rel="preload" as="image" href="/buddies-apercu/img/hero-burger-mobile.webp" media="(max-width: 760px)">
+<link rel="preload" as="image" href="/buddies-apercu/img/logo-neon.webp">
+<link rel="stylesheet" href="/buddies-apercu/css/style.css">
+<script>
+document.documentElement.classList.add("js");
+// L'intro (logo néon) ne se joue qu'à la première visite de la journée
+try {
+  var jour = new Date().toISOString().slice(0, 10);
+  if (localStorage.getItem("buddies-intro") === jour) document.documentElement.classList.add("sans-intro");
+  else localStorage.setItem("buddies-intro", jour);
+} catch (e) {}
+</script>
+<script type="application/ld+json">{}</script>
+</head>
+<body class="page-mentions">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
+<div class="intro" aria-hidden="true">
+  <div class="intro__logo"><img src="/buddies-apercu/img/logo-neon.webp" alt="" width="260" height="311"></div>
+  <p class="intro__ville">Street food · Levallois-Perret</p>
+</div>
+
+<header class="entete" id="entete">
+  <div class="entete__barre">
+    <button class="entete__menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+      <span class="entete__menu-icone"><span></span><span></span></span>
+    </button>
+
+    <nav class="entete__liens entete__liens--gauche" aria-label="Navigation principale">
+      <a href="/buddies-apercu/#carte">La carte</a>
+      <a href="/buddies-apercu/#resto">Le resto</a>
+    </nav>
+
+    <a class="entete__logo" href="/buddies-apercu/" aria-label="Buddie's, retour à l'accueil">
+      <img src="/buddies-apercu/img/logo-neon.webp" alt="Buddie's" width="64" height="77">
+    </a>
+
+    <nav class="entete__liens entete__liens--droite" aria-label="Infos pratiques">
+      <a href="/buddies-apercu/#infos">Horaires &amp; accès</a>
+      <a href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+
+    <button class="btn btn--rose entete__cta" data-commander type="button" aria-label="Commander">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8zm4 0V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>Commander</span>
+    </button>
+  </div>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <nav class="menu-mobile__liens" aria-label="Menu">
+    <a href="/buddies-apercu/#carte" style="--i:0">La carte</a>
+    <a href="/buddies-apercu/#resto" style="--i:1">Le resto</a>
+    <a href="/buddies-apercu/#infos" style="--i:2">Horaires &amp; accès</a>
+    <a class="menu-mobile__insta" href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener" style="--i:3"><svg class="ico-insta" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="plein"/></svg>Instagram</a>
+  </nav>
+  <div class="menu-mobile__bas">
+    <button class="btn btn--rose btn--large" data-commander type="button">Commander</button>
+    <p>18 Av. de l&#x27;Europe, Levallois-Perret<br><a href="tel:+33187097011">01 87 09 70 11</a></p>
+  </div>
+</div>
+
+<main id="contenu">
+<section class="section texte">
+  <div class="conteneur conteneur--etroit">
+    <h1 class="titre titre--petit">Mentions légales</h1>
+
+    <h2>Éditeur du site</h2>
+    <p>Buddie's<br>18 Av. de l&#x27;Europe, 92300 Levallois-Perret<br>Téléphone : <a href="tel:+33187097011">01 87 09 70 11</a></p>
+    <p class="a-completer">[À compléter : raison sociale, forme juridique, capital, SIRET, RCS, n° de TVA, nom du responsable de la publication.]</p>
+
+    <h2>Hébergement</h2>
+    <p class="a-completer">[À compléter : nom, adresse et téléphone de l'hébergeur.]</p>
+
+    <h2>Propriété intellectuelle</h2>
+    <p>Le logo, les photos et les textes de ce site appartiennent à Buddie's. Toute reproduction sans autorisation est interdite.</p>
+    <p>Les photos des boissons et les marques Coca-Cola, Fanta, Sprite, Oasis, Lipton Ice Tea, Perrier et Cristaline appartiennent à leurs propriétaires respectifs.</p>
+
+    <h2>Données personnelles</h2>
+    <p>Ce site ne contient aucun formulaire et ne collecte aucune donnée personnelle. Les commandes passent par Uber Eats ou Deliveroo, qui appliquent leur propre politique de confidentialité.</p>
+    <p>La carte Google Maps intégrée peut déposer des cookies de Google lorsque vous l'utilisez.</p>
+
+    <p><a class="btn btn--contour" href="/buddies-apercu/">Retour à l'accueil</a></p>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied" id="pied">
+  <div class="pied__haut">
+    <img class="pied__logo" src="/buddies-apercu/img/logo-neon.webp" alt="Buddie's" width="110" height="132" loading="lazy">
+    <p class="pied__accroche">Street food cacher<br>à Levallois-Perret</p>
+    <a class="pied__insta" href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener" aria-label="Instagram de Buddie's (@buddiesburger92)"><svg class="ico-insta" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="plein"/></svg><span>@buddiesburger92</span></a>
+  </div>
+  <div class="pied__cols">
+    <div>
+      <h2>Adresse</h2>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Buddie%27s+18+Avenue+de+l%27Europe+92300+Levallois-Perret" target="_blank" rel="noopener">18 Av. de l&#x27;Europe<br>92300 Levallois-Perret</a></p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p><a href="tel:+33187097011">01 87 09 70 11</a><br><a href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener">@buddiesburger92</a></p>
+    </div>
+    <div>
+      <h2>Livraison</h2>
+      <p><a href="https://www.ubereats.com/fr/store/buddies-k/vQ8DZvfCRmCXk20rf0aHwA" target="_blank" rel="noopener">Uber Eats</a><br><a href="https://deliveroo.fr/fr/menu/paris/levallois-perret/buddies-paris" target="_blank" rel="noopener">Deliveroo</a></p>
+    </div>
+  </div>
+  <p class="pied__legal">© 2026 Buddie's <span>·</span> <a href="/buddies-apercu/mentions-legales/">Mentions légales</a></p>
+</footer>
+
+<a class="appel" href="tel:+33187097011" aria-label="Appeler Buddie's au 01 87 09 70 11">
+  <span class="appel__icone" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </span>
+  <span class="appel__txt"><b>Appeler</b><small>01 87 09 70 11</small></span>
+</a>
+
+<dialog class="commande" id="commande" aria-labelledby="commande-titre">
+  <form method="dialog" class="fermer"><button aria-label="Fermer">×</button></form>
+  <h2 id="commande-titre">Commander</h2>
+  <p class="commande__statut" data-statut></p>
+  <div class="commande__choix">
+    <a class="choix choix--officiel" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener">
+      <span><b>Commander en ligne</b><small>Site officiel Buddie's · paiement direct</small></span><i aria-hidden="true">↗</i>
+    </a>
+    <a class="choix choix--uber" href="https://www.ubereats.com/fr/store/buddies-k/vQ8DZvfCRmCXk20rf0aHwA" target="_blank" rel="noopener">
+      <span><b>Uber Eats</b><small>Livraison</small></span><i aria-hidden="true">↗</i>
+    </a>
+    <a class="choix choix--deliveroo" href="https://deliveroo.fr/fr/menu/paris/levallois-perret/buddies-paris" target="_blank" rel="noopener">
+      <span><b>Deliveroo</b><small>Livraison</small></span><i aria-hidden="true">↗</i>
+    </a>
+    <a class="choix choix--tel" href="tel:+33187097011">
+      <span><b>Par téléphone</b><small>01 87 09 70 11 · à emporter</small></span><i aria-hidden="true">↗</i>
+    </a>
+  </div>
+</dialog>
+
+<dialog class="fiche" id="fiche" aria-labelledby="fiche-titre">
+  <form method="dialog" class="fermer"><button aria-label="Fermer">×</button></form>
+  <div class="fiche__photo"><img src="data:," alt="" width="698" height="559"></div>
+  <div class="fiche__corps">
+    <h2 id="fiche-titre"></h2>
+    <p class="fiche__prix"></p>
+    <ul class="fiche__qtes"></ul>
+    <h3 class="fiche__sous">Ce qu'il y a dedans</h3>
+    <ul class="fiche__compo"></ul>
+    <p class="fiche__menu">En menu <b>+4,50 €</b> avec frites maison et boisson</p>
+    <button class="btn btn--rose btn--large fiche__cta" type="button" data-commander>Commander</button>
+  </div>
+</dialog>
+
+<script>window.HORAIRES = [["11:30", "22:30"], ["11:30", "22:30"], ["11:30", "22:30"], ["11:30", "22:30"], ["11:30", "14:30"], ["18:30", "22:30"], ["11:30", "22:30"]];</script>
+<script src="/buddies-apercu/js/main.js" defer></script>
+</body>
+</html>
