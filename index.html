@@ -1,0 +1,829 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>html.verrou body>*:not(.verrou-boite){display:none!important}
+.verrou-boite{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:#0a0628;font-family:Barlow,system-ui,sans-serif;color:#fff;text-align:center}
+.verrou-boite form{width:min(340px,100%);display:flex;flex-direction:column;gap:16px}
+.verrou-boite img{width:96px;margin:0 auto 6px}
+.verrou-boite h1{margin:0;font:400 30px/1.1 Anton,Impact,sans-serif;text-transform:uppercase}
+.verrou-boite p{margin:0;color:#b9b3e0}
+.verrou-boite input{font:600 20px/1 Barlow,sans-serif;text-align:center;letter-spacing:.08em;padding:16px;border-radius:14px;border:2px solid #3a2f8a;background:#140d45;color:#fff;text-transform:uppercase}
+.verrou-boite button{font:700 17px/1 Barlow,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:18px;border:0;border-radius:14px;background:#ff2bd6;color:#fff;cursor:pointer}
+.verrou-boite .erreur{color:#ff7ad9;min-height:1.2em}</style>
+<script>(function(){var H="90b5cb844ea624855c513ea3ae714b3ee3d99a9345890eaae8639f965a1168bb";try{if(localStorage.getItem("buddies-apercu")===H)return}catch(e){}
+document.documentElement.classList.add("verrou");
+document.addEventListener("DOMContentLoaded",function(){var d=document.createElement("div");d.className="verrou-boite";
+d.innerHTML='<form><img src="/buddies-apercu/img/logo-neon.webp" alt="Buddie\'s"><h1>Aperçu du site</h1><p>Entrez le code reçu pour voir le site.</p><input name="c" autocomplete="off" required aria-label="Code d\'accès"><button>Voir le site</button><p class="erreur" role="alert"></p></form>';
+document.body.appendChild(d);var f=d.querySelector("form");f.c.focus();
+f.addEventListener("submit",function(e){e.preventDefault();var v="buddies-apercu:"+f.c.value.trim().toUpperCase();
+crypto.subtle.digest("SHA-256",new TextEncoder().encode(v)).then(function(b){var h=Array.from(new Uint8Array(b)).map(function(x){return x.toString(16).padStart(2,"0")}).join("");
+if(h===H){try{localStorage.setItem("buddies-apercu",H)}catch(e){}d.remove();document.documentElement.classList.remove("verrou")}
+else{d.querySelector(".erreur").textContent="Code incorrect.";f.c.select()}})})})})();</script>
+<title>Aperçu · Buddie&#x27;s – Burgers &amp; Street Food à Levallois-Perret</title>
+<meta name="description" content="Buddie&#x27;s, street food à Levallois-Perret : burgers, signatures 150 g, french tacos, hot-dogs et desserts. Sur place, à emporter ou en livraison avec Uber Eats et Deliveroo. 01 87 09 70 11.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://buddiesburger.fr/">
+<meta name="theme-color" content="#0a0628">
+<meta property="og:type" content="restaurant">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Buddie's">
+<meta property="og:title" content="Buddie&#x27;s – Burgers &amp; Street Food à Levallois-Perret">
+<meta property="og:description" content="Buddie&#x27;s, street food à Levallois-Perret : burgers, signatures 150 g, french tacos, hot-dogs et desserts. Sur place, à emporter ou en livraison avec Uber Eats et Deliveroo. 01 87 09 70 11.">
+<meta property="og:url" content="https://buddiesburger.fr/">
+<meta property="og:image" content="https://buddiesburger.fr/img/partage.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/buddies-apercu/img/favicon.png">
+<link rel="apple-touch-icon" href="/buddies-apercu/img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="/buddies-apercu/img/hero-burger.webp" media="(min-width: 761px)">
+<link rel="preload" as="image" href="/buddies-apercu/img/hero-burger-mobile.webp" media="(max-width: 760px)">
+<link rel="preload" as="image" href="/buddies-apercu/img/logo-neon.webp">
+<link rel="stylesheet" href="/buddies-apercu/css/style.css?v=1794487727">
+<script>
+document.documentElement.classList.add("js");
+// L'intro (logo néon) ne se joue qu'à la première visite de la journée
+try {
+  var jour = new Date().toISOString().slice(0, 10);
+  if (localStorage.getItem("buddies-intro") === jour) document.documentElement.classList.add("sans-intro");
+  else localStorage.setItem("buddies-intro", jour);
+} catch (e) {}
+</script>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Buddie's",
+ "description": "Restaurant cacher de street food à Levallois-Perret : burgers, signatures 150 g, french tacos, hot-dogs, sandwichs, salades et desserts.",
+ "url": "https://buddiesburger.fr/",
+ "logo": "https://buddiesburger.fr/img/logo-bleu.png",
+ "image": "https://buddiesburger.fr/img/street-food-buddies.jpg",
+ "telephone": "+33187097011",
+ "servesCuisine": [
+  "Burgers",
+  "Street food",
+  "French tacos",
+  "Hot-dogs"
+ ],
+ "priceRange": "€",
+ "menu": "https://buddiesburger.fr/#carte",
+ "acceptsReservations": false,
+ "hasMenu": "https://buddiesburger.fr/#carte",
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "18 Av. de l'Europe",
+  "postalCode": "92300",
+  "addressLocality": "Levallois-Perret",
+  "addressCountry": "FR"
+ },
+ "sameAs": [
+  "https://www.instagram.com/buddiesburger92/",
+  "https://www.ubereats.com/fr/store/buddies-k/vQ8DZvfCRmCXk20rf0aHwA",
+  "https://deliveroo.fr/fr/menu/paris/levallois-perret/buddies-paris"
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Monday",
+   "opens": "11:30",
+   "closes": "22:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Tuesday",
+   "opens": "11:30",
+   "closes": "22:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Wednesday",
+   "opens": "11:30",
+   "closes": "22:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Thursday",
+   "opens": "11:30",
+   "closes": "22:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Friday",
+   "opens": "11:30",
+   "closes": "14:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Saturday",
+   "opens": "18:30",
+   "closes": "22:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": "Sunday",
+   "opens": "11:30",
+   "closes": "22:30"
+  }
+ ]
+}</script>
+</head>
+<body class="page-accueil">
+<a class="evitement" href="#contenu">Aller au contenu</a>
+
+<div class="intro" aria-hidden="true">
+  <div class="intro__logo"><img src="/buddies-apercu/img/logo-neon.webp" alt="" width="260" height="311"></div>
+  <p class="intro__ville">Street food · Levallois-Perret</p>
+</div>
+
+<header class="entete" id="entete">
+  <div class="entete__barre">
+    <button class="entete__menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu-mobile">
+      <span class="entete__menu-icone"><span></span><span></span></span>
+    </button>
+
+    <nav class="entete__liens entete__liens--gauche" aria-label="Navigation principale">
+      <a href="/buddies-apercu/#carte">La carte</a>
+      <a href="/buddies-apercu/#resto">Le resto</a>
+    </nav>
+
+    <a class="entete__logo" href="/buddies-apercu/" aria-label="Buddie's, retour à l'accueil">
+      <img src="/buddies-apercu/img/logo-neon.webp" alt="Buddie's" width="64" height="77">
+    </a>
+
+    <nav class="entete__liens entete__liens--droite" aria-label="Infos pratiques">
+      <a href="/buddies-apercu/#infos">Horaires &amp; accès</a>
+      <div class="livraison">
+        <button type="button" class="livraison__btn" aria-haspopup="true">Livraison<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <div class="livraison__menu"><a class="logo-livraison" href="https://www.ubereats.com/fr/store/buddies-k/vQ8DZvfCRmCXk20rf0aHwA" target="_blank" rel="noopener"><img src="/buddies-apercu/img/logos/uber-eats.svg" alt="Uber Eats" width="146" height="24"></a><a class="logo-livraison" href="https://deliveroo.fr/fr/menu/paris/levallois-perret/buddies-paris" target="_blank" rel="noopener"><img src="/buddies-apercu/img/logos/deliveroo.svg" alt="Deliveroo" width="120" height="32"></a></div>
+      </div>
+      <a class="entete__insta" href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener" aria-label="Instagram de Buddie's"><svg class="ico-insta" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="plein"/></svg></a>
+    </nav>
+
+    <a class="btn btn--rose entete__cta" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener" data-commander aria-label="Commander">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2L5 8zm4 0V6a3 3 0 0 1 6 0v2"/></svg>
+      <span>Commander</span>
+    </a>
+  </div>
+</header>
+
+<div class="menu-mobile" id="menu-mobile" hidden>
+  <nav class="menu-mobile__liens" aria-label="Menu">
+    <a href="/buddies-apercu/#carte" style="--i:0">La carte</a>
+    <a href="/buddies-apercu/#resto" style="--i:1">Le resto</a>
+    <a href="/buddies-apercu/#infos" style="--i:2">Horaires &amp; accès</a>
+    <div class="menu-mobile__livraison" style="--i:3"><small>Livraison</small><div><a class="logo-livraison" href="https://www.ubereats.com/fr/store/buddies-k/vQ8DZvfCRmCXk20rf0aHwA" target="_blank" rel="noopener"><img src="/buddies-apercu/img/logos/uber-eats.svg" alt="Uber Eats" width="146" height="24"></a><a class="logo-livraison" href="https://deliveroo.fr/fr/menu/paris/levallois-perret/buddies-paris" target="_blank" rel="noopener"><img src="/buddies-apercu/img/logos/deliveroo.svg" alt="Deliveroo" width="120" height="32"></a></div></div>
+    <a class="menu-mobile__insta" href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener" style="--i:4" aria-label="Instagram de Buddie's"><svg class="ico-insta" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="plein"/></svg></a>
+  </nav>
+  <div class="menu-mobile__bas">
+    <a class="btn btn--rose btn--large" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener" data-commander>Commander</a>
+    <p>18 Av. de l&#x27;Europe, Levallois-Perret<br><a href="tel:+33187097011">01 87 09 70 11</a></p>
+  </div>
+</div>
+
+<main id="contenu">
+<section class="hero" aria-labelledby="hero-titre">
+  <div class="hero__fond" data-parallaxe="0.25" aria-hidden="true">
+    <picture>
+      <source media="(max-width: 760px)" srcset="/buddies-apercu/img/hero-burger-mobile.webp">
+      <source srcset="/buddies-apercu/img/hero-burger.webp" type="image/webp">
+      <img src="/buddies-apercu/img/hero-burger.jpg" alt="" width="1600" height="778" fetchpriority="high">
+    </picture>
+  </div>
+  <div class="hero__voile" aria-hidden="true"></div>
+
+  <div class="hero__contenu">
+    <p class="statut-pilule" data-statut-court><span class="point"></span><span class="txt">Levallois-Perret</span></p>
+    <h1 id="hero-titre" class="hero__titre">
+      <span class="hero__script">All you need is a</span>
+      <span class="hero__mot" aria-label="Burger.">
+        <span style="--l:0">B</span><span style="--l:1">U</span><span style="--l:2">R</span><span style="--l:3">G</span><span style="--l:4">E</span><span style="--l:5">R</span><span style="--l:6" class="rose">.</span>
+      </span>
+    </h1>
+    <p class="hero__sous">Burgers, french tacos, hot-dogs et milkshakes. <br>Sur place, à emporter ou en livraison.</p>
+    <div class="boutons">
+      <a class="btn btn--rose btn--large" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener" data-commander>Commander</a>
+      <a class="btn btn--contour btn--large" href="#carte">Voir la carte</a>
+    </div>
+  </div>
+
+  <a class="hero__bas" href="#incontournables" aria-label="Faire défiler"><span></span></a>
+</section>
+
+<div class="bandeaux" aria-hidden="true">
+  <div class="bandeau bandeau--rose"><div class="bandeau__piste">
+    <span>Burgers</span><i></i><span>French tacos</span><i></i><span>Hot-dogs</span><i></i><span>Tenders</span><i></i><span>Milkshakes</span><i></i>
+    <span>Burgers</span><i></i><span>French tacos</span><i></i><span>Hot-dogs</span><i></i><span>Tenders</span><i></i><span>Milkshakes</span><i></i>
+    <span>Burgers</span><i></i><span>French tacos</span><i></i><span>Hot-dogs</span><i></i><span>Tenders</span><i></i><span>Milkshakes</span><i></i>
+    <span>Burgers</span><i></i><span>French tacos</span><i></i><span>Hot-dogs</span><i></i><span>Tenders</span><i></i><span>Milkshakes</span><i></i>
+    <span>Burgers</span><i></i><span>French tacos</span><i></i><span>Hot-dogs</span><i></i><span>Tenders</span><i></i><span>Milkshakes</span><i></i>
+    <span>Burgers</span><i></i><span>French tacos</span><i></i><span>Hot-dogs</span><i></i><span>Tenders</span><i></i><span>Milkshakes</span><i></i>
+  </div></div>
+  <div class="bandeau bandeau--bleu"><div class="bandeau__piste">
+    <span>Sur place</span><i></i><span>À emporter</span><i></i><span>En livraison</span><i></i><span>Levallois-Perret</span><i></i>
+    <span>Sur place</span><i></i><span>À emporter</span><i></i><span>En livraison</span><i></i><span>Levallois-Perret</span><i></i>
+    <span>Sur place</span><i></i><span>À emporter</span><i></i><span>En livraison</span><i></i><span>Levallois-Perret</span><i></i>
+    <span>Sur place</span><i></i><span>À emporter</span><i></i><span>En livraison</span><i></i><span>Levallois-Perret</span><i></i>
+    <span>Sur place</span><i></i><span>À emporter</span><i></i><span>En livraison</span><i></i><span>Levallois-Perret</span><i></i>
+    <span>Sur place</span><i></i><span>À emporter</span><i></i><span>En livraison</span><i></i><span>Levallois-Perret</span><i></i>
+  </div></div>
+</div>
+
+<section class="section" id="incontournables" aria-labelledby="inc-titre">
+  <div class="conteneur">
+    <header class="tete-section">
+      <h2 class="titre" id="inc-titre"><span class="titre__ligne"><span>Nos</span></span> <span class="titre__ligne"><span>incontournables</span></span></h2>
+      <p class="tete-section__txt anim">Les grands classiques de la street-food, à notre façon.</p>
+    </header>
+  </div>
+  <div class="conteneur signature signature--inc">
+    <div class="signature__grille">
+      <div class="signature__visuel">
+        <div class="signature__halo" aria-hidden="true"></div>
+        <a href="#carte" data-plat="buddies" aria-label="Voir Le Buddie's dans la carte"><img data-tourne src="/buddies-apercu/img/plats/buddies.webp" alt="Le Buddie's : 150 g de viande, bacon, œuf, oignons caramélisés et cheddar" loading="lazy" width="698" height="559"></a>
+        <span class="sticker" aria-hidden="true"><b>150 g</b>de viande</span>
+      </div>
+      <div class="signature__txt">
+        <p class="script-accent anim">la star des incontournables</p>
+        <h3 class="titre" id="sig-titre"><span class="titre__ligne"><span>Le Buddie's</span></span></h3>
+        <p class="signature__compo anim">Bacon, sauce BBQ, sauce burger, salade iceberg, tomates, cornichons, oignons caramélisés, œuf et cheddar.</p>
+        <div class="boutons boutons--gauche anim">
+          <a class="btn btn--rose" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener" data-commander>Je le veux</a>
+          <a class="btn btn--contour" href="#signatures" data-onglet-lien="signatures">Les signatures</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="inc-suite anim">Et aussi…</p>
+  <div class="photos-cat"><a class="photo-cat" href="#carte" data-plat="big-mac">
+  <span class="photo-cat__img"><img src="/buddies-apercu/img/plats/big-mac.webp" alt="Le Big Mac chez Buddie's" loading="lazy" width="698" height="559"></span>
+  <span class="photo-cat__txt"><b>Le Big Mac</b><small>Double steak, sauce burger, cheddar</small></span>
+</a><a class="photo-cat" href="#carte" data-plat="chicken-rouge">
+  <span class="photo-cat__img"><img src="/buddies-apercu/img/plats/chicken-rouge.webp" alt="Le Chicken Rouge chez Buddie's" loading="lazy" width="698" height="559"></span>
+  <span class="photo-cat__txt"><b>Le Chicken Rouge</b><small>Poulet tandoori, sauce burger, cheddar</small></span>
+</a><a class="photo-cat" href="#carte" data-plat="tacos-chicken-cheese">
+  <span class="photo-cat__img"><img src="/buddies-apercu/img/plats/tacos-chicken-cheese.webp" alt="Tacos Chicken &amp; Cheese chez Buddie's" loading="lazy" width="698" height="559"></span>
+  <span class="photo-cat__txt"><b>Tacos Chicken &amp; Cheese</b><small>Poulet, sauce fromagère, frites</small></span>
+</a><a class="photo-cat" href="#carte" data-plat="hotdog-avocado">
+  <span class="photo-cat__img"><img src="/buddies-apercu/img/plats/hotdog-avocado.webp" alt="Hot-Dog Avocado chez Buddie's" loading="lazy" width="698" height="559"></span>
+  <span class="photo-cat__txt"><b>Hot-Dog Avocado</b><small>Guacamole, oignons caramélisés et crispy</small></span>
+</a><a class="photo-cat" href="#carte" data-plat="nuggets">
+  <span class="photo-cat__img"><img src="/buddies-apercu/img/plats/nuggets.webp" alt="Nuggets chez Buddie's" loading="lazy" width="698" height="559"></span>
+  <span class="photo-cat__txt"><b>Nuggets</b><small>Poulet croustillant, sauce BBQ</small></span>
+</a><a class="photo-cat" href="#carte" data-plat="tasty-crousty">
+  <span class="photo-cat__img"><img src="/buddies-apercu/img/plats/tasty-crousty.webp" alt="Tasty Crousty chez Buddie's" loading="lazy" width="698" height="559"></span>
+  <span class="photo-cat__txt"><b>Tasty Crousty</b><small>Poulet pané, riz, sauce fromagère et chili</small></span>
+</a></div>
+  <div class="cat-nav">
+    <button type="button" class="cat-nav__btn" data-cat="-1" aria-label="Plat précédent"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <span class="cat-nav__points" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+    <button type="button" class="cat-nav__btn" data-cat="1" aria-label="Plat suivant"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+
+</section>
+
+<section class="section carte" id="carte" aria-labelledby="carte-titre">
+  <div class="conteneur">
+    <header class="tete-section tete-section--centre">
+      <h2 class="titre" id="carte-titre"><span class="titre__ligne"><span>La carte</span></span></h2>
+      <p class="tete-section__txt anim">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+    </header>
+    <div class="onglets anim">
+      <div class="onglets__piste" role="tablist" aria-label="Catégories de la carte"><button class="onglet actif" type="button" role="tab" id="o-formules" aria-controls="formules" aria-selected="true" data-onglet="formules">Formules</button><button class="onglet" type="button" role="tab" id="o-petites-faims" aria-controls="petites-faims" aria-selected="false" data-onglet="petites-faims">Petites Faims</button><button class="onglet" type="button" role="tab" id="o-burgers" aria-controls="burgers" aria-selected="false" data-onglet="burgers">Burgers</button><button class="onglet" type="button" role="tab" id="o-signatures" aria-controls="signatures" aria-selected="false" data-onglet="signatures">Signatures</button><button class="onglet" type="button" role="tab" id="o-hotdogs" aria-controls="hotdogs" aria-selected="false" data-onglet="hotdogs">Hot-Dogs</button><button class="onglet" type="button" role="tab" id="o-sandwichs" aria-controls="sandwichs" aria-selected="false" data-onglet="sandwichs">Sandwichs Kebab</button><button class="onglet" type="button" role="tab" id="o-tacos" aria-controls="tacos" aria-selected="false" data-onglet="tacos">French Tacos</button><button class="onglet" type="button" role="tab" id="o-salades" aria-controls="salades" aria-selected="false" data-onglet="salades">Salades</button><button class="onglet" type="button" role="tab" id="o-desserts" aria-controls="desserts" aria-selected="false" data-onglet="desserts">Desserts</button><button class="onglet" type="button" role="tab" id="o-extras" aria-controls="extras" aria-selected="false" data-onglet="extras">Boissons &amp; extras</button><span class="onglets__curseur" aria-hidden="true"></span></div>
+    </div>
+    <div class="panneaux">
+      <section class="panneau actif" id="formules" role="tabpanel" aria-labelledby="o-formules">
+  <header class="panneau__tete">
+    <h3>Les Formules</h3>
+    <p class="panneau__pain">Prix du plat + supplément menu</p>
+    
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/formule-burger.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/formule-burger-p.webp" alt="Menu Burger" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Menu Burger</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">+4,50 €</span></div>
+  <p class="ligne__compo">Burger au choix · Frites maison · Boisson au choix</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/formule-hotdog.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/formule-hotdog-p.webp" alt="Menu Hot-Dog" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Menu Hot-Dog</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">+4,50 €</span></div>
+  <p class="ligne__compo">Hot-dog au choix · Frites maison · Boisson au choix</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/formule-sandwich.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/formule-sandwich-p.webp" alt="Menu Sandwich Kebab" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Menu Sandwich Kebab</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">+4,50 €</span></div>
+  <p class="ligne__compo">Sandwich au choix · Frites maison · Boisson au choix</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-chicken-cheese.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-chicken-cheese-p.webp" alt="Menu French Tacos" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Menu French Tacos</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">+4,50 €</span></div>
+  <p class="ligne__compo">French tacos au choix · Frites maison · Boisson au choix</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/salade-cesar.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/salade-cesar-p.webp" alt="Menu Salade" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Menu Salade</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">+1,50 €</span></div>
+  <p class="ligne__compo">Salade ou Tasty Crousty au choix · Boisson au choix</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="petites-faims" role="tabpanel" aria-labelledby="o-petites-faims">
+  <header class="panneau__tete">
+    <h3>Les Petites Faims</h3>
+    <p class="panneau__pain">À partager… ou pas</p>
+    
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/wrap-tenders.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/wrap-tenders-p.webp" alt="Wrap Tenders" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Wrap Tenders</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">9 €</span></div>
+  <p class="ligne__compo">Motsi · Sauce tartare · Salade iceberg · Tomates · Cornichons · Oignons crispy · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/nuggets.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/nuggets-p.webp" alt="Nuggets" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Nuggets</h4></div>
+  <p class="ligne__compo">Sauce BBQ</p>
+  <ul class="ligne__qtes"><li><b>x4</b><span>5 €</span></li><li><b>x8</b><span>9 €</span></li><li><b>x12</b><span>13 €</span></li></ul>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tenders.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tenders-p.webp" alt="Tenders" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Tenders</h4></div>
+  <p class="ligne__compo">Sauce BBQ</p>
+  <ul class="ligne__qtes"><li><b>x3</b><span>8 €</span></li><li><b>x6</b><span>15 €</span></li><li><b>x9</b><span>22 €</span></li></ul>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/mozza-sticks.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/mozza-sticks-p.webp" alt="Mozza Sticks" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Mozza Sticks</h4></div>
+  <p class="ligne__compo">Sauce pesto</p>
+  <ul class="ligne__qtes"><li><b>x4</b><span>6,50 €</span></li><li><b>x8</b><span>12 €</span></li><li><b>x12</b><span>17,50 €</span></li></ul>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/onion-rings.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/onion-rings-p.webp" alt="Onion Rings" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Onion Rings</h4></div>
+  <p class="ligne__compo">Sauce BBQ</p>
+  <ul class="ligne__qtes"><li><b>x4</b><span>4 €</span></li><li><b>x8</b><span>7,50 €</span></li><li><b>x12</b><span>10,50 €</span></li></ul>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/frites.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/frites-p.webp" alt="Cornet de frites" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Cornet de frites</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">3,50 €</span></div>
+  <p class="ligne__compo">Frites maison</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="burgers" role="tabpanel" aria-labelledby="o-burgers">
+  <header class="panneau__tete">
+    <h3>Les Burgers Classiques</h3>
+    <p class="panneau__pain">Mezonot · 80 g de viande hachée</p>
+    <p class="panneau__menu">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/hamburger.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/hamburger-p.webp" alt="L&#x27;Hamburger" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>L&#x27;Hamburger</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">7,50 €</span></div>
+  <p class="ligne__compo">Moutarde US · Ketchup · Oignons blancs · Cornichons</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/cheeseburger.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/cheeseburger-p.webp" alt="Le Cheeseburger" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Cheeseburger</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8,50 €</span></div>
+  <p class="ligne__compo">Moutarde US · Ketchup · Oignons blancs · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/double-cheeseburger.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/double-cheeseburger-p.webp" alt="Le Double Cheeseburger" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Double Cheeseburger</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13 €</span></div>
+  <p class="ligne__compo">Moutarde US · Ketchup · Oignons blancs · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/double-cheese-bacon.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/double-cheese-bacon-p.webp" alt="Le Double Cheese Bacon" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Double Cheese Bacon</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">15,50 €</span></div>
+  <p class="ligne__compo">Bacon · Moutarde US · Ketchup · Oignons blancs · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/beef-bbq.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/beef-bbq-p.webp" alt="Le Beef BBQ" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Beef BBQ</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8,50 €</span></div>
+  <p class="ligne__compo">BBQ · Salade iceberg · Oignons blancs · Tomates · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/double-beef-bbq.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/double-beef-bbq-p.webp" alt="Le Double Beef BBQ" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Double Beef BBQ</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13 €</span></div>
+  <p class="ligne__compo">BBQ · Salade iceberg · Oignons blancs · Tomates · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/big-mac.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/big-mac-p.webp" alt="Le Big Mac" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Big Mac</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13 €</span></div>
+  <p class="ligne__compo">Sauce burger · Salade iceberg · Oignons blancs · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/mac-chicken.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/mac-chicken-p.webp" alt="Le Mac Chicken" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Mac Chicken</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">7,50 €</span></div>
+  <p class="ligne__compo">Poulet pané · Sauce tartare · Salade iceberg</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/royal-chicken.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/royal-chicken-p.webp" alt="Le Royal Chicken" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Royal Chicken</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8,50 €</span></div>
+  <p class="ligne__compo">Sauce tartare · Salade iceberg · Tomates · Cornichons · Oignons caramélisés · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/filet-o-fish.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/filet-o-fish-p.webp" alt="Le Filet-O-Fish" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Filet-O-Fish</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11 €</span></div>
+  <p class="ligne__compo">Poisson pané · Sauce tartare · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/royal-fish.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/royal-fish-p.webp" alt="Le Royal Fish" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Royal Fish</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">12 €</span></div>
+  <p class="ligne__compo">Poisson pané · Sauce tartare · Salade iceberg · Tomates · Oignons caramélisés · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/big-tasty.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/big-tasty-p.webp" alt="Le Big Tasty" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Big Tasty</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">9 €</span></div>
+  <p class="ligne__compo">Sauce burger · Salade iceberg · Oignons blancs · Tomates · Emmental</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/double-big-tasty.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/double-big-tasty-p.webp" alt="Le Double Big Tasty" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Double Big Tasty</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13,50 €</span></div>
+  <p class="ligne__compo">Sauce burger · Salade iceberg · Oignons blancs · Tomates · Emmental</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="signatures" role="tabpanel" aria-labelledby="o-signatures">
+  <header class="panneau__tete">
+    <h3>Les Signatures</h3>
+    <p class="panneau__pain">Mezonot · 150 g de viande hachée</p>
+    <p class="panneau__menu">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/buddies.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/buddies-p.webp" alt="Le Buddie&#x27;s" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Buddie&#x27;s <span class="ligne__tag">La signature</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">17,50 €</span></div>
+  <p class="ligne__compo">Bacon · BBQ · Sauce burger · Salade iceberg · Tomates · Cornichons · Oignons caramélisés · Œuf · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/avocado.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/avocado-p.webp" alt="L&#x27;Avocado" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>L&#x27;Avocado</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">16,50 €</span></div>
+  <p class="ligne__compo">Sauce burger · Salade iceberg · Tomates · Guacamole · Oignons caramélisés · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/savoyard.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/savoyard-p.webp" alt="Le Savoyard" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Savoyard</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">17,50 €</span></div>
+  <p class="ligne__compo">Bacon · Moutarde US · Sauce burger · Roquette · Cornichons · Oignons caramélisés · Fromage à raclette</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/italien.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/italien-p.webp" alt="L&#x27;Italien" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>L&#x27;Italien</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">15,50 €</span></div>
+  <p class="ligne__compo">Sauce pesto · Roquette · Tomates · Courgettes · Aubergines · Oignons caramélisés · Mozzarella</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/truffle.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/truffle-p.webp" alt="Le Truffle" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Truffle</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">15,50 €</span></div>
+  <p class="ligne__compo">Sauce truffe · Roquette · Champignons · Oignons caramélisés · Mozzarella</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/spicy.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/spicy-p.webp" alt="Le Spicy" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Spicy <span class="ligne__tag">Ça pique</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">14 €</span></div>
+  <p class="ligne__compo">Moutarde US · Sauce sriracha · Salade iceberg · Tomates · Piment · Oignons caramélisés · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/blue-cheese.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/blue-cheese-p.webp" alt="Le Blue Cheese" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Blue Cheese</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">14,50 €</span></div>
+  <p class="ligne__compo">Moutarde US · Sauce tartare · Roquette · Champignons · Oignons caramélisés · Blue cheese</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/big-burger.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/big-burger-p.webp" alt="Le Big Burger" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Big Burger</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13 €</span></div>
+  <p class="ligne__compo">Ketchup · Mayonnaise · Salade iceberg · Tomates · Oignons caramélisés · Cornichons</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/cordon-bleu-burger.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/cordon-bleu-burger-p.webp" alt="Le Cordon Bleu" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Cordon Bleu</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">12 €</span></div>
+  <p class="ligne__compo">Mayonnaise · BBQ · Salade iceberg · Tomates · Cornichons · Oignons caramélisés</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="hotdogs" role="tabpanel" aria-labelledby="o-hotdogs">
+  <header class="panneau__tete">
+    <h3>Les Hot-Dogs</h3>
+    <p class="panneau__pain">Mezonot · Saucisse de volaille</p>
+    <p class="panneau__menu">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/hotdog-classic.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/hotdog-classic-p.webp" alt="Le Classic" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Classic</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">5,50 €</span></div>
+  <p class="ligne__compo">Moutarde US · Ketchup · Oignons crispy</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/hotdog-cheesy.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/hotdog-cheesy-p.webp" alt="Le Cheesy" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Cheesy</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8 €</span></div>
+  <p class="ligne__compo">Moutarde US · Ketchup · Cheddar fondu · Oignons caramélisés · Oignons crispy</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/hotdog-avocado.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/hotdog-avocado-p.webp" alt="L&#x27;Avocado" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>L&#x27;Avocado</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8,50 €</span></div>
+  <p class="ligne__compo">Moutarde US · Ketchup · Guacamole · Oignons caramélisés · Oignons crispy</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/hotdog-new-york.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/hotdog-new-york-p.webp" alt="Le New York" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le New York</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8,50 €</span></div>
+  <p class="ligne__compo">Bacon · Moutarde US · Ketchup · Cornichons · Oignons caramélisés · Oignons crispy</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/hotdog-jalapeno.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/hotdog-jalapeno-p.webp" alt="Le Jalapeño" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Jalapeño <span class="ligne__tag">Ça pique</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">8,50 €</span></div>
+  <p class="ligne__compo">Bacon · Moutarde US · Sauce sriracha · Piment · Oignons caramélisés · Oignons crispy</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="sandwichs" role="tabpanel" aria-labelledby="o-sandwichs">
+  <header class="panneau__tete">
+    <h3>Les Sandwichs Kebab</h3>
+    <p class="panneau__pain">Motsi</p>
+    <p class="panneau__menu">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/americain.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/americain-p.webp" alt="L&#x27;Américain" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>L&#x27;Américain</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">12,50 €</span></div>
+  <p class="ligne__compo">Viande hachée · Bacon · Sauce burger · Salade iceberg · Oignons blancs · Tomates · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/kebab.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/kebab-p.webp" alt="Le Kebab" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Kebab</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">12,50 €</span></div>
+  <p class="ligne__compo">Parguit de poulet · Sauce blanche · Salade iceberg · Oignons blancs · Tomates</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/chicken.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/chicken-p.webp" alt="Le Chicken" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Chicken</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">9,50 €</span></div>
+  <p class="ligne__compo">Poulet pané maison · Sauce tartare · Salade iceberg · Oignons blancs · Tomates · Cornichons · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/chicken-rouge.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/chicken-rouge-p.webp" alt="Le Chicken Rouge" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Chicken Rouge</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11,50 €</span></div>
+  <p class="ligne__compo">Poulet tandoori · Sauce burger · Salade iceberg · Oignons blancs · Tomates · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/chicken-curry.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/chicken-curry-p.webp" alt="Le Chicken Curry" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Chicken Curry</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11,50 €</span></div>
+  <p class="ligne__compo">Poulet curry · Sauce tartare · Salade iceberg · Oignons blancs · Tomates · Cheddar</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/cordon-bleu-sandwich.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/cordon-bleu-sandwich-p.webp" alt="Le Cordon Bleu" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Cordon Bleu</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11 €</span></div>
+  <p class="ligne__compo">Cordon bleu · Sauce burger · Salade iceberg · Oignons blancs · Tomates · Cornichons</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="tacos" role="tabpanel" aria-labelledby="o-tacos">
+  <header class="panneau__tete">
+    <h3>Les French Tacos</h3>
+    <p class="panneau__pain">Motsi</p>
+    <p class="panneau__menu">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-chicken-cheese.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-chicken-cheese-p.webp" alt="Le Chicken &amp; Cheese" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Chicken &amp; Cheese</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">9,50 €</span></div>
+  <p class="ligne__compo">Sauce tartare · Sauce fromagère · Oignons blancs · Tomates · Cornichons · Frites</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-steak-cheese.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-steak-cheese-p.webp" alt="Le Steak &amp; Cheese" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Steak &amp; Cheese</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Sauce burger · Sauce fromagère · Oignons blancs · Tomates · Cornichons · Frites</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-cordon-bleu-cheese.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-cordon-bleu-cheese-p.webp" alt="Le Cordon Bleu &amp; Cheese" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Cordon Bleu &amp; Cheese</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11 €</span></div>
+  <p class="ligne__compo">Sauce burger · Sauce fromagère · Oignons blancs · Tomates · Cornichons · Frites</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-kebab-cheese.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-kebab-cheese-p.webp" alt="Le Kebab &amp; Cheese" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Kebab &amp; Cheese</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">12,50 €</span></div>
+  <p class="ligne__compo">Sauce tartare · Sauce fromagère · Oignons blancs · Tomates · Frites</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-chicken-gratine.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-chicken-gratine-p.webp" alt="Le Chicken Gratiné" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Chicken Gratiné <span class="ligne__tag">Gratiné</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13,50 €</span></div>
+  <p class="ligne__compo">Tacos Chicken &amp; Cheese gratiné : emmental · Oignons crispy · Bacon</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-steak-gratine.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-steak-gratine-p.webp" alt="Le Steak Gratiné" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Steak Gratiné <span class="ligne__tag">Gratiné</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">14,50 €</span></div>
+  <p class="ligne__compo">Tacos Steak &amp; Cheese gratiné : cheddar · Oignons crispy · Bacon</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-kebab-gratine.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-kebab-gratine-p.webp" alt="Le Kebab Gratiné" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Kebab Gratiné <span class="ligne__tag">Gratiné</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">16 €</span></div>
+  <p class="ligne__compo">Tacos Kebab &amp; Cheese gratiné : mozzarella · Oignons crispy</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tacos-cordon-bleu-gratine.webp" data-menu><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tacos-cordon-bleu-gratine-p.webp" alt="Le Cordon Bleu Gratiné" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Le Cordon Bleu Gratiné <span class="ligne__tag">Gratiné</span></h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">17,50 €</span></div>
+  <p class="ligne__compo">Tacos Cordon Bleu &amp; Cheese gratiné : fromage à raclette · Oignons crispy · Bacon</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="salades" role="tabpanel" aria-labelledby="o-salades">
+  <header class="panneau__tete">
+    <h3>Salades &amp; Tasty Crousty</h3>
+    <p class="panneau__pain">Menu + boisson : 1,50 €</p>
+    
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tasty-crousty.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tasty-crousty-p.webp" alt="Tasty Crousty" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Tasty Crousty</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">14 €</span></div>
+  <p class="ligne__compo">Poulet pané · Riz · Sauce fromagère · Sauce chili · Oignons crispy</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/salade-cesar.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/salade-cesar-p.webp" alt="La César" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>La César</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">14 €</span></div>
+  <p class="ligne__compo">Poulet pané · Sauce César · Oignons blancs · Tomates cerises · Parmesan</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/salade-kebab.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/salade-kebab-p.webp" alt="La Kebab" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>La Kebab</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">14 €</span></div>
+  <p class="ligne__compo">Parguit de poulet · Sauce blanche · Oignons blancs · Tomates cerises</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/salade-cabillaud.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/salade-cabillaud-p.webp" alt="La Cabillaud" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>La Cabillaud</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">18,50 €</span></div>
+  <p class="ligne__compo">Cabillaud pané · Sauce salade · Oignons blancs · Tomates cerises</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/salade-italienne.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/salade-italienne-p.webp" alt="L&#x27;Italienne" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>L&#x27;Italienne</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">13,50 €</span></div>
+  <p class="ligne__compo">Roquette · Mozza stick · Sauce pesto · Oignons blancs · Tomates cerises · Courgettes · Aubergines · Parmesan</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="desserts" role="tabpanel" aria-labelledby="o-desserts">
+  <header class="panneau__tete">
+    <h3>Les Desserts</h3>
+    <p class="panneau__pain">Pour finir en beauté</p>
+    
+  </header>
+  <ul class="lignes"><li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tiramisu-oreo.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tiramisu-oreo-p.webp" alt="Tiramisu Oreo" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Tiramisu Oreo</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">7,50 €</span></div>
+  <p class="ligne__compo">Oreo · Nutella</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/tiramisu-speculoos.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/tiramisu-speculoos-p.webp" alt="Tiramisu Spéculoos" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Tiramisu Spéculoos</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">7,50 €</span></div>
+  <p class="ligne__compo">Spéculoos · Caramel</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/cheesecake-oreo.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/cheesecake-oreo-p.webp" alt="Cheesecake Oreo" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Cheesecake Oreo</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11 €</span></div>
+  <p class="ligne__compo">Oreo · Nutella</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/cheesecake-speculoos.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/cheesecake-speculoos-p.webp" alt="Cheesecake Spéculoos" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Cheesecake Spéculoos</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">11 €</span></div>
+  <p class="ligne__compo">Spéculoos · Caramel</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/sundae-oreo.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/sundae-oreo-p.webp" alt="Sundae Oreo" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Sundae Oreo</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">6,50 €</span></div>
+  <p class="ligne__compo">Nutella · Oreo</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/sundae-speculoos.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/sundae-speculoos-p.webp" alt="Sundae Spéculoos" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Sundae Spéculoos</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">6,50 €</span></div>
+  <p class="ligne__compo">Spéculoos · Caramel</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/milkshake-fraise.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/milkshake-fraise-p.webp" alt="Milkshake Fraise" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Milkshake Fraise</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Parfum fraise</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/milkshake-vanille.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/milkshake-vanille-p.webp" alt="Milkshake Vanille" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Milkshake Vanille</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Parfum vanille</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/milkshake-nutella.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/milkshake-nutella-p.webp" alt="Milkshake Nutella" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Milkshake Nutella</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Parfum Nutella</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/milkshake-speculoos.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/milkshake-speculoos-p.webp" alt="Milkshake Spéculoos" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Milkshake Spéculoos</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Parfum spéculoos</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/milkshake-oreo.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/milkshake-oreo-p.webp" alt="Milkshake Oreo" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Milkshake Oreo</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Parfum Oreo</p>
+</div></li>
+<li class="ligne" tabindex="0" role="button" aria-haspopup="dialog" data-fiche data-photo="/buddies-apercu/img/plats/milkshake-caramel.webp"><span class="ligne__photo"><img src="/buddies-apercu/img/plats/milkshake-caramel-p.webp" alt="Milkshake Caramel" loading="lazy" width="300" height="240"><i aria-hidden="true">+</i></span><div class="ligne__txt">
+  <div class="ligne__haut"><h4>Milkshake Caramel</h4><span class="ligne__pts" aria-hidden="true"></span><span class="ligne__prix">10 €</span></div>
+  <p class="ligne__compo">Parfum caramel</p>
+</div></li></ul>
+</section>
+<section class="panneau" id="extras" role="tabpanel" aria-labelledby="o-extras">
+  <header class="panneau__tete">
+    <h3>Boissons &amp; extras</h3>
+    <p class="panneau__pain">Toutes les boissons : 2,50 €</p>
+  </header>
+  <ul class="boissons"><li class="boisson"><img src="/buddies-apercu/img/boissons/coca-cola.webp" alt="Coca-Cola" loading="lazy" width="240" height="400"><span>Coca-Cola</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/coca-cola-zero.webp" alt="Coca-Cola Zéro" loading="lazy" width="240" height="400"><span>Coca-Cola Zéro</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/coca-cola-cherry.webp" alt="Coca-Cola Cherry" loading="lazy" width="240" height="400"><span>Coca-Cola Cherry</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/oasis-tropical.webp" alt="Oasis Tropical" loading="lazy" width="240" height="400"><span>Oasis Tropical</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/ice-tea-peche.webp" alt="Ice Tea Pêche" loading="lazy" width="240" height="400"><span>Ice Tea Pêche</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/fanta-orange.webp" alt="Fanta Orange" loading="lazy" width="240" height="400"><span>Fanta Orange</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/fanta-citron.webp" alt="Fanta Citron" loading="lazy" width="240" height="400"><span>Fanta Citron</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/sprite.webp" alt="Sprite" loading="lazy" width="240" height="400"><span>Sprite</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/perrier.webp" alt="Perrier" loading="lazy" width="240" height="400"><span>Perrier</span></li><li class="boisson"><img src="/buddies-apercu/img/boissons/cristaline.webp" alt="Cristaline" loading="lazy" width="240" height="400"><span>Cristaline</span></li></ul>
+  <div class="supps"><div class="supp"><h4>Les viandes</h4><ul><li><span>Viande hachée 80 g</span><b>2,50 €</b></li><li><span>Viande hachée 150 g</span><b>5 €</b></li><li><span>Tenders</span><b>1,50 €</b></li><li><span>Poulet pané</span><b>2,50 €</b></li><li><span>Cordon bleu</span><b>3,50 €</b></li><li><span>Kebab</span><b>5 €</b></li><li><span>Poulet curry</span><b>2,50 €</b></li><li><span>Poulet tandoori</span><b>2,50 €</b></li><li><span>Cabillaud pané</span><b>4,50 €</b></li><li><span>Bacon</span><b>2 €</b></li></ul></div><div class="supp"><h4>Les fromages</h4><ul><li><span>Cheddar en tranche</span><b>1 €</b></li><li><span>Cheddar fondu</span><b>2 €</b></li><li><span>Emmental</span><b>1 €</b></li><li><span>Fromage à raclette</span><b>1,50 €</b></li><li><span>Blue cheese</span><b>1,50 €</b></li><li><span>Mozzarella</span><b>1,50 €</b></li><li><span>Parmesan</span><b>1 €</b></li><li><span>Pot de cheddar fondu</span><b>5,50 €</b></li><li><span>Pot de sauce fromagère</span><b>4,50 €</b></li></ul></div><div class="supp"><h4>Les garnitures</h4><ul><li><span>Oignons caramélisés</span><b>1 €</b></li><li><span>Oignons crispy</span><b>1 €</b></li><li><span>Avocat</span><b>2 €</b></li><li><span>Guacamole</span><b>2,50 €</b></li><li><span>Jalapeños</span><b>1 €</b></li><li><span>Œuf</span><b>1,50 €</b></li><li><span>Champignons</span><b>1 €</b></li><li><span>Courgettes</span><b>1 €</b></li><li><span>Aubergines</span><b>1 €</b></li></ul></div><div class="supp"><h4>Les sauces</h4><ul><li><span>Ketchup</span><b>0,50 €</b></li><li><span>Mayonnaise</span><b>0,50 €</b></li><li><span>Moutarde US</span><b>0,50 €</b></li><li><span>BBQ</span><b>0,50 €</b></li><li><span>Burger</span><b>1 €</b></li><li><span>Tartare</span><b>1 €</b></li><li><span>Pesto</span><b>1 €</b></li><li><span>Sriracha</span><b>1 €</b></li><li><span>Chili</span><b>1 €</b></li><li><span>César</span><b>1 €</b></li><li><span>Salade</span><b>1 €</b></li><li><span>Truffe</span><b>1 €</b></li></ul></div></div>
+</section>
+    </div>
+  </div>
+</section>
+
+<section class="section resto" id="resto" aria-labelledby="resto-titre">
+  <div class="conteneur resto__grille">
+    <div class="resto__photo">
+      <img data-parallaxe="-0.08" src="/buddies-apercu/img/street-food-buddies.webp" alt="Burgers, chicken burger, wrap, frites et boisson chez Buddie's" loading="lazy" width="1460" height="1077">
+    </div>
+    <div class="resto__txt">
+      <h2 class="titre" id="resto-titre"><span class="titre__ligne"><span>Le resto</span></span></h2>
+      <p class="anim">Buddie's, c'est la street food comme on l'aime : des burgers bien garnis, des tacos gratinés, des tenders croustillants et des milkshakes à partager. Une cuisine cacher, généreuse, qui ne fait aucun compromis sur le goût.</p>
+      <p class="anim">On vous attend au <b>18 Av. de l&#x27;Europe</b>, à Levallois-Perret.</p>
+      <div class="cacher">
+        <div class="tampon" role="img" aria-label="Cacher : sous la surveillance du Rav Avraham Barou'h Pevzner, Rav de la communauté Loubavitch de Paris">
+  <svg viewBox="0 0 200 200" aria-hidden="true">
+    <defs><path id="anneau-milieu" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+    <circle class="tampon__fond" cx="100" cy="100" r="97"/>
+    <circle class="tampon__bord" cx="100" cy="100" r="94"/>
+    <g class="tampon__tourne">
+      <text class="tampon__anneau" text-anchor="start"><textPath href="#anneau-milieu" textLength="508" lengthAdjust="spacing">SOUS LA SURVEILLANCE DU RAV AVRAHAM BAROU'H PEVZNER ★ LOUBAVITCH DE PARIS ★</textPath></text>
+    </g>
+    <circle class="tampon__disque" cx="100" cy="100" r="68"/>
+    <circle class="tampon__trait" cx="100" cy="100" r="63.5"/>
+    <path class="tampon__770" d="M89.9,72.0 L89.9,51.8 L94.0,45.0 L98.3,51.8 L100.0,48.8 L102.4,51.8 L105.8,45.0 L110.1,51.8 L110.1,72.0 Z"/>
+    <text class="tampon__heb" x="100" y="85" text-anchor="middle" textLength="50" lengthAdjust="spacingAndGlyphs">בהשגחת הרב</text>
+    <text class="tampon__heb" x="100" y="96" text-anchor="middle" textLength="78" lengthAdjust="spacingAndGlyphs">אברהם ברוך פעווזנער</text>
+    <text class="tampon__cacher" x="100" y="121" text-anchor="middle" textLength="88" lengthAdjust="spacingAndGlyphs">CACHER</text>
+    <path class="tampon__filet" d="M74,128 H126"/>
+    <text class="tampon__nom" x="100" y="142" text-anchor="middle" textLength="64" lengthAdjust="spacingAndGlyphs">RAV PEVZNER</text>
+  </svg>
+</div>
+
+        <p class="cacher__txt anim"><b>100 % cacher</b>Sous la surveillance du Rav Avraham Barou'h Pevzner, Rav de la communauté Loubavitch de Paris.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="conteneur">
+    <header class="salle__tete anim" id="en-images">
+      <p class="script-accent">Bienvenue chez vous !</p>
+      <h3 class="salle__titre">Le resto en images</h3>
+    </header>
+    <ul class="salle" aria-label="Photos du restaurant">
+      <li class="anim" style="--d:0ms"><img src="/buddies-apercu/img/salle/salle.webp" alt="La salle de Buddie's, néons « All you need is a burger » et tables" loading="lazy" width="720" height="960"></li>
+      <li class="anim" style="--d:100ms"><img src="/buddies-apercu/img/salle/coin-tables.webp" alt="Les tables sous les néons burger et Coca-Cola" loading="lazy" width="720" height="960"></li>
+      <li class="anim" style="--d:200ms"><img src="/buddies-apercu/img/salle/comptoir.webp" alt="Le comptoir, les écrans menu et la borne de commande" loading="lazy" width="720" height="960"></li>
+      <li class="anim" style="--d:300ms"><img src="/buddies-apercu/img/salle/devanture.webp" alt="La devanture de Buddie's et la terrasse" loading="lazy" width="720" height="960"></li>
+    </ul>
+  </div>
+
+  <div class="conteneur">
+    <ul class="formules">
+      <li class="formule anim" style="--d:0ms">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 6v14a5 5 0 0 0 5 5v17M14 6v10m5-10v10m5-10v14a5 5 0 0 1-5 5M34 42V6c-4 2-6 8-6 14v6h6"/></svg>
+        <h3>Sur place</h3>
+        <p>Venez comme vous êtes.</p>
+      </li>
+      <li class="formule anim" style="--d:120ms">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 16h28l-2 26H12L10 16zm8 0v-4a6 6 0 0 1 12 0v4"/></svg>
+        <h3>À emporter</h3>
+        <p>Commandez en quelques clics, récupérez et régalez-vous !</p>
+      </li>
+      <li class="formule anim" style="--d:240ms">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 30h20l4-12h8m-8 12h6a6 6 0 0 1 6 6M12 36a5 5 0 1 0 0 .1M36 36a5 5 0 1 0 0 .1M8 22h12"/></svg>
+        <h3>En livraison</h3>
+        <p>Commandez en quelques clics et faites-vous livrer directement chez vous, aux mêmes prix que sur notre carte !</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="section infos" id="infos" aria-labelledby="infos-titre">
+  <div class="conteneur">
+    <header class="tete-section">
+      <h2 class="titre" id="infos-titre"><span class="titre__ligne"><span>Horaires</span></span> <span class="titre__ligne"><span>&amp; accès</span></span></h2>
+    </header>
+    <div class="infos__grille">
+      <div class="bloc anim">
+        <h3>Horaires</h3>
+        <p class="statut" data-statut></p>
+        <ul class="horaires"><li data-jour="0"><span>Lundi</span><b>11h30 – 22h30</b></li><li data-jour="1"><span>Mardi</span><b>11h30 – 22h30</b></li><li data-jour="2"><span>Mercredi</span><b>11h30 – 22h30</b></li><li data-jour="3"><span>Jeudi</span><b>11h30 – 22h30</b></li><li data-jour="4"><span>Vendredi</span><b>11h30 – 14h30</b></li><li data-jour="5"><span>Samedi</span><b>18h30 – 22h30</b></li><li data-jour="6"><span>Dimanche</span><b>11h30 – 22h30</b></li></ul>
+        <p class="note">Samedi : horaires d&#x27;hiver.</p>
+      </div>
+      <div class="bloc anim" style="--d:120ms">
+        <h3>Adresse</h3>
+        <p class="gros">18 Av. de l&#x27;Europe<br>92300 Levallois-Perret</p>
+        <h3>Téléphone</h3>
+        <p class="gros"><a href="tel:+33187097011">01 87 09 70 11</a></p>
+        <div class="boutons boutons--gauche">
+          <a class="btn btn--contour" href="https://www.google.com/maps/search/?api=1&amp;query=Buddie%27s+18+Avenue+de+l%27Europe+92300+Levallois-Perret" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+      <div class="bloc bloc--plan anim" style="--d:240ms">
+        <iframe title="Plan d'accès Buddie's, 18 avenue de l'Europe, Levallois-Perret" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=18%20Avenue%20de%20l%27Europe%2C%2092300%20Levallois-Perret&amp;z=16&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section final" aria-labelledby="final-titre">
+  <div class="conteneur final__in">
+    <h2 id="final-titre" class="final__titre anim">J'ai faim</h2>
+    <p class="anim">Votre commande est à deux clics.</p>
+    <div class="boutons anim">
+      <a class="btn btn--rose btn--large" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener" data-commander>Commander</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pied" id="pied">
+  <div class="pied__haut">
+    <img class="pied__logo" src="/buddies-apercu/img/logo-neon.webp" alt="Buddie's" width="110" height="132" loading="lazy">
+    <p class="pied__accroche">Street food cacher<br>à Levallois-Perret</p>
+    <div class="pied__tampon"><div class="tampon" role="img" aria-label="Cacher : sous la surveillance du Rav Avraham Barou'h Pevzner, Rav de la communauté Loubavitch de Paris">
+  <svg viewBox="0 0 200 200" aria-hidden="true">
+    <defs><path id="anneau-bas" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0"/></defs>
+    <circle class="tampon__fond" cx="100" cy="100" r="97"/>
+    <circle class="tampon__bord" cx="100" cy="100" r="94"/>
+    <g class="tampon__tourne">
+      <text class="tampon__anneau" text-anchor="start"><textPath href="#anneau-bas" textLength="508" lengthAdjust="spacing">SOUS LA SURVEILLANCE DU RAV AVRAHAM BAROU'H PEVZNER ★ LOUBAVITCH DE PARIS ★</textPath></text>
+    </g>
+    <circle class="tampon__disque" cx="100" cy="100" r="68"/>
+    <circle class="tampon__trait" cx="100" cy="100" r="63.5"/>
+    <path class="tampon__770" d="M89.9,72.0 L89.9,51.8 L94.0,45.0 L98.3,51.8 L100.0,48.8 L102.4,51.8 L105.8,45.0 L110.1,51.8 L110.1,72.0 Z"/>
+    <text class="tampon__heb" x="100" y="85" text-anchor="middle" textLength="50" lengthAdjust="spacingAndGlyphs">בהשגחת הרב</text>
+    <text class="tampon__heb" x="100" y="96" text-anchor="middle" textLength="78" lengthAdjust="spacingAndGlyphs">אברהם ברוך פעווזנער</text>
+    <text class="tampon__cacher" x="100" y="121" text-anchor="middle" textLength="88" lengthAdjust="spacingAndGlyphs">CACHER</text>
+    <path class="tampon__filet" d="M74,128 H126"/>
+    <text class="tampon__nom" x="100" y="142" text-anchor="middle" textLength="64" lengthAdjust="spacingAndGlyphs">RAV PEVZNER</text>
+  </svg>
+</div>
+</div>
+  </div>
+  <div class="pied__cols">
+    <div>
+      <h2>Adresse</h2>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Buddie%27s+18+Avenue+de+l%27Europe+92300+Levallois-Perret" target="_blank" rel="noopener">18 Av. de l&#x27;Europe<br>92300 Levallois-Perret</a></p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <p><a href="tel:+33187097011">01 87 09 70 11</a></p>
+      <p><a class="pied__insta-mini" href="https://www.instagram.com/buddiesburger92/" target="_blank" rel="noopener" aria-label="Instagram de Buddie's"><svg class="ico-insta" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" class="plein"/></svg></a></p>
+    </div>
+    <div>
+      <h2>Livraison</h2>
+      <p class="pied__livraison">
+        <a class="logo-livraison" href="https://www.ubereats.com/fr/store/buddies-k/vQ8DZvfCRmCXk20rf0aHwA" target="_blank" rel="noopener"><img src="/buddies-apercu/img/logos/uber-eats.svg" alt="Uber Eats" width="146" height="24"></a>
+        <a class="logo-livraison" href="https://deliveroo.fr/fr/menu/paris/levallois-perret/buddies-paris" target="_blank" rel="noopener"><img src="/buddies-apercu/img/logos/deliveroo.svg" alt="Deliveroo" width="120" height="32"></a>
+      </p>
+    </div>
+  </div>
+  <p class="pied__legal">© 2026 Buddie's <span>·</span> <a href="/buddies-apercu/mentions-legales/">Mentions légales</a></p>
+</footer>
+
+<a class="appel" href="tel:+33187097011" aria-label="Appeler Buddie's au 01 87 09 70 11">
+  <span class="appel__icone" aria-hidden="true">
+    <svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </span>
+  <span class="appel__txt"><b>Appeler</b><small>01 87 09 70 11</small></span>
+</a>
+
+<dialog class="fiche" id="fiche" aria-labelledby="fiche-titre">
+  <form method="dialog" class="fermer"><button aria-label="Fermer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></form>
+  <div class="fiche__photo"><img src="data:," alt="" width="698" height="559"></div>
+  <div class="fiche__corps">
+    <h2 id="fiche-titre" tabindex="-1"></h2>
+    <p class="fiche__prix"></p>
+    <ul class="fiche__qtes"></ul>
+    <h3 class="fiche__sous">Ce qu'il y a dedans</h3>
+    <ul class="fiche__compo"></ul>
+    <p class="fiche__menu">Menu <b>+4,50 €</b> (inclus des frites maison et une boisson au choix)</p>
+    <a class="btn btn--rose btn--large fiche__cta" href="https://buddies-levallois-perret-web.izipass.pro/" target="_blank" rel="noopener" data-commander>Commander</a>
+  </div>
+</dialog>
+
+<script>window.HORAIRES = [["11:30", "22:30"], ["11:30", "22:30"], ["11:30", "22:30"], ["11:30", "22:30"], ["11:30", "14:30"], ["18:30", "22:30"], ["11:30", "22:30"]];</script>
+<script src="/buddies-apercu/js/main.js?v=1794487727" defer></script>
+</body>
+</html>
